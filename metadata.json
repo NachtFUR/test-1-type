@@ -1,0 +1,6 @@
+{
+  "name": "Remington & Quill - Victorian Typewriter Studio",
+  "description": "An authentic Victorian typewriter writing studio with tactile mechanical key sounds, parchment aesthetics, offline manuscript autosave, and PDF/DOCX export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

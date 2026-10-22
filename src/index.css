@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-special-elite: 'Special Elite', monospace;
+    --font-courier-prime: 'Courier Prime', monospace;
+    --font-im-fell: 'IM Fell English', serif;
+    --font-baskerville: 'Libre Baskerville', serif;
+    --font-playfair: 'Playfair Display', serif;
+  }
+}
+
+/* Custom fonts */
+.font-special-elite {
+  font-family: var(--font-special-elite);
+}
+.font-courier-prime {
+  font-family: var(--font-courier-prime);
+}
+.font-im-fell {
+  font-family: var(--font-im-fell);
+}
+.font-baskerville {
+  font-family: var(--font-baskerville);
+}
+.font-playfair {
+  font-family: var(--font-playfair);
+}
+
+/* Aged Parchment Textures */
+.parchment-aged {
+  background-color: #f6eedb;
+  background-image: 
+    radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.4) 0%, rgba(220, 195, 155, 0.4) 80%, rgba(185, 150, 105, 0.55) 100%),
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(160, 120, 80, 0.02) 3px, transparent 4px);
+  box-shadow: 
+    0 4px 25px rgba(0, 0, 0, 0.45),
+    0 1px 3px rgba(0, 0, 0, 0.3),
+    inset 0 0 60px rgba(160, 120, 70, 0.15),
+    inset 0 0 15px rgba(120, 80, 40, 0.2);
+}
+
+.parchment-vellum {
+  background-color: #fbf7ee;
+  background-image: 
+    radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.5) 0%, rgba(235, 225, 205, 0.35) 85%, rgba(200, 185, 150, 0.45) 100%);
+  box-shadow: 
+    0 4px 25px rgba(0, 0, 0, 0.45),
+    0 1px 3px rgba(0, 0, 0, 0.3),
+    inset 0 0 50px rgba(175, 145, 105, 0.12);
+}
+
+.parchment-teastained {
+  background-color: #eee1c5;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(180, 135, 85, 0.22) 0%, transparent 45%),
+    radial-gradient(circle at 80% 75%, rgba(160, 115, 65, 0.25) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(250, 240, 220, 0.3) 0%, rgba(210, 180, 140, 0.45) 85%, rgba(160, 120, 70, 0.6) 100%);
+  box-shadow: 
+    0 4px 30px rgba(0, 0, 0, 0.5),
+    inset 0 0 80px rgba(140, 95, 50, 0.28),
+    inset 0 0 20px rgba(100, 65, 30, 0.35);
+}
+
+.parchment-fog {
+  background-color: #e5e3dd;
+  background-image: 
+    radial-gradient(ellipse at 50% 50%, rgba(245, 245, 240, 0.5) 0%, rgba(210, 205, 195, 0.4) 80%, rgba(165, 160, 150, 0.55) 100%);
+  box-shadow: 
+    0 4px 25px rgba(0, 0, 0, 0.45),
+    inset 0 0 60px rgba(110, 105, 95, 0.18);
+}
+
+/* Wood Bureau Background */
+.wood-bureau {
+  background-color: #1a120c;
+  background-image: 
+    radial-gradient(circle at 50% 35%, rgba(70, 42, 22, 0.45) 0%, rgba(20, 13, 8, 0.95) 75%),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.01) 0px, transparent 1px, transparent 40px);
+}
+
+/* Victorian Candle Glow */
+@keyframes candleFlicker {
+  0% { opacity: 0.85; transform: scale(1); }
+  25% { opacity: 0.92; transform: scale(1.02) translate(1px, -1px); }
+  50% { opacity: 0.82; transform: scale(0.99) translate(-1px, 1px); }
+  75% { opacity: 0.95; transform: scale(1.01); }
+  100% { opacity: 0.85; transform: scale(1); }
+}
+
+.candle-glow-light {
+  animation: candleFlicker 4s infinite ease-in-out;
+  pointer-events: none;
+}
+
+/* Mechanical Lever Pull animation */
+@keyframes leverPull {
+  0% { transform: rotate(0deg); }
+  35% { transform: rotate(26deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.lever-action {
+  animation: leverPull 0.35s ease-out;
+}
+
+/* Vintage Paper Edge & Deckle */
+.deckle-edge {
+  position: relative;
+}
+.deckle-edge::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: radial-gradient(circle at 5px 0, transparent 4px, rgba(160, 120, 80, 0.3) 5px);
+  background-size: 10px 6px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Vintage scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1e1610;
+}
+::-webkit-scrollbar-thumb {
+  background: #5a422d;
+  border-radius: 4px;
+  border: 1px solid #3c2b1e;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7a5a3e;
+}
